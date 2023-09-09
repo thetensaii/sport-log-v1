@@ -1,0 +1,14 @@
+{
+  "name": "sport-log",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "front-office:dev": "pnpm --filter=\"front-office\" run dev",
+    "front-office:lint": "pnpm --filter=\"front-office\" run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
