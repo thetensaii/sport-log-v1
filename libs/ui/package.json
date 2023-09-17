@@ -7,7 +7,10 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "rm -rf dist && ts-node --esm build.ts && tsc --declaration --emitDeclarationOnly"
+    "build": "rm -rf dist && ts-node --esm build.ts && tsc --declaration --emitDeclarationOnly",
+    "dev": "rm -rf dist && concurrently \"pnpm run watch-ts\" \"pnpm run watch-dts\"",
+    "watch-ts": "nodemon --watch 'src/*' -e ts,tsx --exec 'tsx build.ts'",
+    "watch-dts": "tsc --watch --declaration --emitDeclarationOnly"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +22,10 @@
     "framer-motion": "^10.16.4"
   },
   "devDependencies": {
+    "concurrently": "^8.2.1",
     "esbuild": "^0.19.2",
-    "ts-node": "^10.9.1",
+    "nodemon": "^3.0.1",
+    "tsx": "^3.12.10",
     "typescript": "^5.0.2"
   },
   "peerDependencies": {
