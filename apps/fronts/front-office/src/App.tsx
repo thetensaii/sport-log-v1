@@ -1,10 +1,13 @@
 import { UIProvider } from "@sport-log/ui"
-import { Portal } from "./Portal"
+// import { AuthForm as PlayerAuthForm } from "./player/AuthForm"
+// import { AuthForm as CoachAuthForm } from "./coach/AuthForm"
+// import { SignUpForm as CoachSignUpForm } from "./coach/SignUpForm"
+import { Home as PlayerHome } from "./player/Home"
 
 export const App = () => {
   return (
     <UIProvider>
-      <Portal />
+      <PlayerHome />
     </UIProvider> 
   )
 }
