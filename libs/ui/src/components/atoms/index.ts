@@ -9,4 +9,5 @@ export * from './Input';
 export * from './Select';
 export * from './Checkbox';
 export * from './Box';
-export * from './Link'
+export * from './Link';
+export * from './Modal';
