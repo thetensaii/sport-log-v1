@@ -1,5 +1,7 @@
 import { VStack } from "@sport-log/ui"
 import { PlayerCard } from "./PlayerCard"
+import { useState } from "react";
+import { PlayerProfileModal } from "./PlayerProfileModal";
 
 const PLAYERS_LIST = [
   {
@@ -44,20 +46,35 @@ const computeAge = (birthdate: Date) => {
 }
 
 export const PlayersList = () => {
+  const [viewPlayerProfile, setViewPlayerProfile] = useState<number | null>(null)
+
+
+  const closePlayerProfileModal = () => {
+    setViewPlayerProfile(null)
+  }
+
+  const onSeeProfileClick = (id: number) => {
+    setViewPlayerProfile(id)
+  }
+
   return (
-    <VStack w="full">
-      {PLAYERS_LIST.map((player) => (
-        <PlayerCard 
-          firstname={player.firstname}
-          lastname={player.lastname}
-          age={computeAge(player.birthdate)}
-          gender={player.gender}
-          height={player.height}
-          positions={player.positions}
-          currentClub={player.currentClub}
-          currentDivision={player.currentDivision}
-        />
-      ))}
-    </VStack>
+    <>
+      <VStack w="full">
+        {PLAYERS_LIST.map((player) => (
+          <PlayerCard 
+            firstname={player.firstname}
+            lastname={player.lastname}
+            age={computeAge(player.birthdate)}
+            gender={player.gender}
+            height={player.height}
+            positions={player.positions}
+            currentClub={player.currentClub}
+            currentDivision={player.currentDivision}
+            onSeeProfileClick={onSeeProfileClick}
+          />
+        ))}
+      </VStack>
+      <PlayerProfileModal isOpen={viewPlayerProfile !== null} closeModal={closePlayerProfileModal}/>
+    </>
   )
 }

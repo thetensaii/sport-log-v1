@@ -12,9 +12,10 @@ type Props = {
   positions: string[],
   currentClub: string,
   currentDivision: string,
+  onSeeProfileClick: (id: number) => void
 }
 
-export const PlayerCard = ({ firstname, lastname, gender, age, height, positions, currentClub, currentDivision}: Props) => {
+export const PlayerCard = ({ firstname, lastname, gender, age, height, positions, currentClub, currentDivision, onSeeProfileClick}: Props) => {
   return (
     <Card w="full">
       <CardHeader>
@@ -26,7 +27,7 @@ export const PlayerCard = ({ firstname, lastname, gender, age, height, positions
             <Text fontSize="lg">Club actuel : {currentClub}</Text>
             <Text fontSize="lg">Division actuel : {currentDivision}</Text>
           </Box>
-          <Button colorScheme="blue" size="lg">Voir profil</Button>
+          <Button colorScheme="blue" size="lg" onClick={() => onSeeProfileClick(age)}>Voir profil</Button>
         </HStack>
       </CardBody>
     </Card>
