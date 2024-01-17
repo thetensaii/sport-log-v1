@@ -12,3 +12,5 @@ export * from './Box';
 export * from './Link';
 export * from './Modal';
 export * from './Tabs';
+export * from './RangeSlider';
+export * from './Grid';
