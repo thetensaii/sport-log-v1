@@ -1,4 +1,4 @@
-import { Box, HStack, Heading, Link, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Text } from "@sport-log/ui"
+import { Box, Heading, Link, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Text } from "@sport-log/ui"
 
 type Props = {
   isOpen: boolean,
