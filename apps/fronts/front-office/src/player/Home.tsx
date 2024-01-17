@@ -71,7 +71,7 @@ export const Home = () => {
             <Box>
               <Heading as="h3" fontSize="2xl">Informations sportives</Heading>
               <Box>
-                <Text fontSize="lg">Position(s) : {player.positions.join(", ")}</Text>
+                <Text fontSize="lg">Poste(s) : {player.positions.join(", ")}</Text>
                 <Text fontSize="lg">Taille : {player.height + " cm"}</Text>
                 <Text fontSize="lg">Club actuel : {player.currentSituation.club}</Text>
                 <Text fontSize="lg">Division : {player.currentSituation.division}</Text>

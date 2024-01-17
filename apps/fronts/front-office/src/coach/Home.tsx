@@ -1,5 +1,6 @@
 import { Text, Center, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, VStack } from "@sport-log/ui"
 import { Profile } from "./Profile"
+import { SearchPlayers } from "./SearchPlayers"
 
 export const Home = () => {
   return (
@@ -16,7 +17,7 @@ export const Home = () => {
               <Profile />
             </TabPanel>
             <TabPanel>
-              <Heading>Écran de recherche</Heading>
+              <SearchPlayers />
             </TabPanel>
           </TabPanels>
         </Tabs>

@@ -30,10 +30,14 @@ export const EditProfileModal = ({ isOpen, closeModal }: Props) => (
 
           <FormControl>
             <FormLabel>Sexe</FormLabel>
-            <Select placeholder="Choisissez un sexe">
-              <option value="homme">Homme</option>
-              <option value="femme">Femme</option>
-            </Select>
+            <Select 
+              placeholder="Choisissez un sexe" 
+              size="md" 
+              options={[
+                {value: "homme", label: "Homme"},
+                {value: "femme", label: "Femme"},
+              ]}
+            /> 
           </FormControl>
 
           <FormControl>

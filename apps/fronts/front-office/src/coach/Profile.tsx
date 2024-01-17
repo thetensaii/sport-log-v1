@@ -47,7 +47,7 @@ export const Profile = () => {
 
   return ( 
     <>
-      <Center maxW="container.lg" mx="auto" pt="14" mb="16">
+      <Center maxW="container.lg" mx="auto">
         <VStack w="full" spacing="8">
           <Heading as='h2' fontSize="3xl">Votre profil</Heading>
 
