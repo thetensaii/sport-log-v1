@@ -11,3 +11,4 @@ export * from './Checkbox';
 export * from './Box';
 export * from './Link';
 export * from './Modal';
+export * from './Tabs';

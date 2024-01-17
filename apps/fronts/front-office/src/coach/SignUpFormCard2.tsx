@@ -16,7 +16,7 @@ export const SignUpFormCard2 = ({onBeforeButtonClick}: Props) => {
             <Text fontSize="2xl" fontWeight='bold'>Infos sportives</Text>
             
             <FormControl>
-              <FormLabel>Poste(s)</FormLabel>
+              <FormLabel>Poste</FormLabel>
               <Input />
             </FormControl>
 
