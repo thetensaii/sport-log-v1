@@ -1,25 +1,38 @@
-import { HStack } from "@sport-log/ui"
-import { Box } from "@sport-log/ui"
-import { Button } from "@sport-log/ui"
-import { Card, CardBody, CardHeader, Text } from "@sport-log/ui"
+import { HStack } from "@sport-log/ui";
+import { Box } from "@sport-log/ui";
+import { Button } from "@sport-log/ui";
+import { Card, CardBody, CardHeader, Text } from "@sport-log/ui";
 
 type Props = {
-  firstname: string,
-  lastname: string,
-  gender: string,
-  age: number,
-  height: number,
-  positions: string[],
-  currentClub: string,
-  currentDivision: string,
-  onSeeProfileClick: (id: number) => void
-}
+  firstname: string;
+  lastname: string;
+  gender: string;
+  age: number;
+  height: number;
+  positions: string[];
+  currentClub: string;
+  currentDivision: string;
+  onSeeProfileClick: (id: number) => void;
+};
 
-export const PlayerCard = ({ firstname, lastname, gender, age, height, positions, currentClub, currentDivision, onSeeProfileClick}: Props) => {
+export const PlayerCard = ({
+  firstname,
+  lastname,
+  gender,
+  age,
+  height,
+  positions,
+  currentClub,
+  currentDivision,
+  onSeeProfileClick,
+}: Props) => {
   return (
     <Card w="full">
       <CardHeader>
-        <Text fontSize="2xl" fontWeight="bold">{firstname} {lastname.toLocaleUpperCase()} - {positions.join(', ')} - {gender.toLocaleUpperCase()} - {`${height} cm`} - {`${age} ans`}</Text>
+        <Text fontSize="2xl" fontWeight="bold">
+          {firstname} {lastname.toLocaleUpperCase()} - {positions.join(", ")} -{" "}
+          {gender.toLocaleUpperCase()} - {`${height} cm`} - {`${age} ans`}
+        </Text>
       </CardHeader>
       <CardBody>
         <HStack justify="space-between">
@@ -27,9 +40,15 @@ export const PlayerCard = ({ firstname, lastname, gender, age, height, positions
             <Text fontSize="lg">Club actuel : {currentClub}</Text>
             <Text fontSize="lg">Division actuel : {currentDivision}</Text>
           </Box>
-          <Button colorScheme="blue" size="lg" onClick={() => onSeeProfileClick(age)}>Voir profil</Button>
+          <Button
+            colorScheme="blue"
+            size="lg"
+            onClick={() => onSeeProfileClick(age)}
+          >
+            Voir profil
+          </Button>
         </HStack>
       </CardBody>
     </Card>
-  )
-}
+  );
+};

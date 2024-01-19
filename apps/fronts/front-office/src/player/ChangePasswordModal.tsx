@@ -1,11 +1,26 @@
-import { Text, Modal, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, ModalBody, VStack, HStack, FormControl, FormLabel, Input, Select, Checkbox, ModalFooter, Button } from "@sport-log/ui"
+import {
+  Text,
+  Modal,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
+  ModalBody,
+  VStack,
+  HStack,
+  FormControl,
+  FormLabel,
+  Input,
+  ModalFooter,
+  Button,
+} from "@sport-log/ui";
 
 type Props = {
-  isOpen: boolean,
-  closeModal: () => void,
-}
+  isOpen: boolean;
+  closeModal: () => void;
+};
 
-export const ChangePasswordModal = ({isOpen, closeModal}: Props) => (
+export const ChangePasswordModal = ({ isOpen, closeModal }: Props) => (
   <Modal isOpen={isOpen} onClose={closeModal} size="lg">
     <ModalOverlay />
     <ModalContent>
@@ -15,7 +30,7 @@ export const ChangePasswordModal = ({isOpen, closeModal}: Props) => (
       <ModalCloseButton />
 
       <ModalBody>
-        <VStack spacing="4" alignItems='flex-start'>
+        <VStack spacing="4" alignItems="flex-start">
           <FormControl>
             <FormLabel>Mot de passe actuel</FormLabel>
             <Input type="password" />
@@ -35,10 +50,19 @@ export const ChangePasswordModal = ({isOpen, closeModal}: Props) => (
 
       <ModalFooter>
         <HStack spacing="2" width="full" justifyContent="end">
-          <Button variant="outline" colorScheme="blue" size="lg" onClick={closeModal}>Retour</Button>
-          <Button colorScheme="blue" size="lg">Modifier</Button>
+          <Button
+            variant="outline"
+            colorScheme="blue"
+            size="lg"
+            onClick={closeModal}
+          >
+            Retour
+          </Button>
+          <Button colorScheme="blue" size="lg">
+            Modifier
+          </Button>
         </HStack>
       </ModalFooter>
     </ModalContent>
   </Modal>
-)
+);

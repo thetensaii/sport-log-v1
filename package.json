@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "pnpm --parallel run dev",
     "lint": "pnpm --parallel run lint",
-    "dev": "pnpm --parallel run dev"
+    "lint:fix": "pnpm --parallel run lint:fix"
   },
   "keywords": [],
   "author": "",
