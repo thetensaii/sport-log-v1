@@ -1,9 +1,25 @@
-import { Text, Button, Checkbox, FormControl, FormLabel, HStack, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Select, VStack } from "@sport-log/ui"
+import {
+  Text,
+  Button,
+  FormControl,
+  FormLabel,
+  HStack,
+  Input,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  Select,
+  VStack,
+} from "@sport-log/ui";
 
 type Props = {
-  isOpen : boolean,
-  closeModal: () => void
-}
+  isOpen: boolean;
+  closeModal: () => void;
+};
 export const EditProfileModal = ({ isOpen, closeModal }: Props) => (
   <Modal isOpen={isOpen} onClose={closeModal} size="xl">
     <ModalOverlay />
@@ -14,8 +30,10 @@ export const EditProfileModal = ({ isOpen, closeModal }: Props) => (
       <ModalCloseButton />
 
       <ModalBody>
-        <VStack spacing="4" alignItems='flex-start'>
-          <Text fontSize="2xl" fontWeight='bold'>Infos Générales</Text>
+        <VStack spacing="4" alignItems="flex-start">
+          <Text fontSize="2xl" fontWeight="bold">
+            Infos Générales
+          </Text>
           <HStack w="full" spacing="6">
             <FormControl>
               <FormLabel>Nom</FormLabel>
@@ -30,14 +48,14 @@ export const EditProfileModal = ({ isOpen, closeModal }: Props) => (
 
           <FormControl>
             <FormLabel>Sexe</FormLabel>
-            <Select 
-              placeholder="Choisissez un sexe" 
-              size="md" 
+            <Select
+              placeholder="Choisissez un sexe"
+              size="md"
               options={[
-                {value: "homme", label: "Homme"},
-                {value: "femme", label: "Femme"},
+                { value: "homme", label: "Homme" },
+                { value: "femme", label: "Femme" },
               ]}
-            /> 
+            />
           </FormControl>
 
           <FormControl>
@@ -55,7 +73,9 @@ export const EditProfileModal = ({ isOpen, closeModal }: Props) => (
             <Input type="email" />
           </FormControl>
 
-          <Text fontSize="2xl" fontWeight='bold'>Infos sportives</Text>
+          <Text fontSize="2xl" fontWeight="bold">
+            Infos sportives
+          </Text>
           <FormControl>
             <FormLabel>Poste</FormLabel>
             <Input />
@@ -73,8 +93,6 @@ export const EditProfileModal = ({ isOpen, closeModal }: Props) => (
             </FormControl>
           </HStack>
 
-
-
           <HStack spacing="8" width="full">
             <FormControl>
               <FormLabel>Lien vers CV Professionnel</FormLabel>
@@ -87,7 +105,9 @@ export const EditProfileModal = ({ isOpen, closeModal }: Props) => (
             </FormControl>
           </HStack>
 
-          <Text fontSize="2xl" fontWeight='bold'>Réseaux Sociaux</Text>
+          <Text fontSize="2xl" fontWeight="bold">
+            Réseaux Sociaux
+          </Text>
           <HStack spacing="8" width="full">
             <FormControl>
               <FormLabel>Lien Instagram</FormLabel>
@@ -103,15 +123,23 @@ export const EditProfileModal = ({ isOpen, closeModal }: Props) => (
             </FormControl>
           </HStack>
         </VStack>
-
       </ModalBody>
 
       <ModalFooter>
         <HStack spacing="2" width="full" justifyContent="end">
-          <Button variant="outline" colorScheme="blue" size="lg" onClick={closeModal}>Retour</Button>
-          <Button colorScheme="blue" size="lg">Enregistrer</Button>
+          <Button
+            variant="outline"
+            colorScheme="blue"
+            size="lg"
+            onClick={closeModal}
+          >
+            Retour
+          </Button>
+          <Button colorScheme="blue" size="lg">
+            Enregistrer
+          </Button>
         </HStack>
       </ModalFooter>
     </ModalContent>
   </Modal>
-)
+);
