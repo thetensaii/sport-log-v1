@@ -1,0 +1,13 @@
+{
+  "name": "@sport-log/eslint-config-custom",
+  "version": "1.0.0",
+  "description": "SportLog Eslint Config Lib",
+  "main": "index.js",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3"
+  }
+}
