@@ -2,8 +2,7 @@
   "name": "@sport-log/ui",
   "version": "1.0.0",
   "description": "SportLog UI Component Lib",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {

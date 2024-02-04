@@ -6,7 +6,8 @@
   // ESLINT
   "eslint.enable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
+    // "source.fixAll.eslint": "always" 
   },
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 }
