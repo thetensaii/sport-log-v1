@@ -11,17 +11,10 @@ const sharedOptions = {
 
 
 const build = async () => {
-
-  await esbuild.build({
-    ...sharedOptions,
-    format: "cjs",
-    outfile: 'dist/index.js',
-  })
-  
   await esbuild.build({
     ...sharedOptions,
     format: "esm",
-    outfile: 'dist/index.mjs',
+    outfile: 'dist/index.js',
   })
 }
 
