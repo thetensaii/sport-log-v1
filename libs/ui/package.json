@@ -8,6 +8,8 @@
   "scripts": {
     "build": "rm -rf dist && ts-node --esm build.ts && tsc --declaration --emitDeclarationOnly",
     "dev": "rm -rf dist && concurrently \"pnpm run watch-ts\" \"pnpm run watch-dts\"",
+    "lint": "eslint ./src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint ./src --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "watch-ts": "nodemon --watch 'src/*' -e ts,tsx --exec 'tsx build.ts'",
     "watch-dts": "tsc --watch --declaration --emitDeclarationOnly"
   },
@@ -22,8 +24,10 @@
     "framer-motion": "^10.16.4"
   },
   "devDependencies": {
+    "@sport-log/eslint-config-custom": "workspace:*",
     "concurrently": "^8.2.1",
     "esbuild": "^0.19.2",
+    "eslint": "^8.45.0",
     "nodemon": "^3.0.1",
     "tsx": "^3.12.10",
     "typescript": "^5.0.2"

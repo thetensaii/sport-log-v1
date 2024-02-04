@@ -1,5 +1,5 @@
-import { Center as ChakraCenter, CenterProps } from '@chakra-ui/react'
+import { Center as ChakraCenter, CenterProps } from "@chakra-ui/react";
 
-export const Center = ({...props}:CenterProps) => {
-  return <ChakraCenter {...props} />
-}
+export const Center = ({ ...props }: CenterProps) => {
+  return <ChakraCenter {...props} />;
+};
