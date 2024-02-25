@@ -2,11 +2,11 @@ services:
   db:
     image: postgres:16
     ports:
-      - "8000:5000"
+      - "${DB_PORT}:5432"
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
-      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_DB=${DB_DATABASE}
   adminer:
     image: adminer
     restart: always
