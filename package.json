@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "pnpm --parallel run dev",
     "lint": "pnpm --parallel run lint",
-    "lint:fix": "pnpm --parallel run lint:fix"
+    "lint:fix": "pnpm --parallel run lint:fix",
+    "db:up": "pnpm --filter 'backend' db:up",
+    "db:down": "pnpm --filter 'backend' db:down",
+    "db:migrations:run": "pnpm --filter 'backend' db:migrations:run",
+    "db:migrations:rollback": "pnpm --filter 'backend' db:migrations:rollback"
   },
   "keywords": [],
   "author": "",
