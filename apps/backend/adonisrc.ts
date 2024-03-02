@@ -37,7 +37,7 @@ export default defineConfig({
   | List of modules to import before starting the application.
   |
   */
-  preloads: [() => import("#players/routes")],
+  preloads: [() => import("#app/routes")],
 
   /*
   |--------------------------------------------------------------------------

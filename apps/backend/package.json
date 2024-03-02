@@ -19,11 +19,11 @@
     "db:migrations:rollback": "node ace migration:rollback"
   },
   "imports": {
-    "#database/*": "./database/*.js",
+    "#app/*": "./app/*.js",
+    "#players/*": "./app/players/*.js",
     "#start/*": "./start/*.js",
-    "#tests/*": "./tests/*.js",
     "#config/*": "./config/*.js",
-    "#players/*": "./app/players/*.js"
+    "#database/*": "./database/*.js"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^7.1.1",
