@@ -27,6 +27,8 @@ export default defineConfig({
   providers: [
     () => import("@adonisjs/core/providers/app_provider"),
     () => import("@adonisjs/lucid/database_provider"),
+    () => import("@adonisjs/core/providers/vinejs_provider"),
+    () => import("#players/provider"),
   ],
 
   /*
@@ -37,7 +39,7 @@ export default defineConfig({
   | List of modules to import before starting the application.
   |
   */
-  preloads: [() => import("#app/routes")],
+  preloads: [() => import("#start/kernel"), () => import("#start/routes")],
 
   /*
   |--------------------------------------------------------------------------
