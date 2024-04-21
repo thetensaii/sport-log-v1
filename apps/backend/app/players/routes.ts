@@ -1,12 +1,9 @@
 import router from "@adonisjs/core/services/router";
+import { CreatePlayerController } from "./controllers/CreatePlayerController.js";
 
 export const playersRouter = () =>
   router
     .group(() => {
-      router.get("/", () => {
-        return {
-          ok: "ca marche",
-        };
-      });
+      router.post("/", [CreatePlayerController, "create"]);
     })
     .prefix("players");
